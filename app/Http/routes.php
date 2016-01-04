@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return 'welcome';
+    return 'Welcome Laravel-Rest';
 });
 
 Route::group(['middleware' => 'cors', 'prefix' => 'api/v1'], function()
