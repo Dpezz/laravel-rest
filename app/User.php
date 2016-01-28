@@ -41,4 +41,8 @@ class User extends Model implements AuthenticatableContract,AuthorizableContract
     public function setPasswordAttribute($value){
       $this->attributes['password'] = bcrypt($value);
     }
+
+    public function tasks(){
+        return $this->hasMany('App\Task', 'user_id', 'id');
+    }
 }
